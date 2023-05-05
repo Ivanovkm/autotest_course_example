@@ -3,6 +3,8 @@
 
 def modification(lst):
     # Здесь нужно написать код
+    last_index = len (lst) - 1
+    lst[0], lst[last_index] = lst[last_index], lst[0]
     return lst
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
