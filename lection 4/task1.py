@@ -17,7 +17,7 @@ def which_triangle(a, b, c):
         type_triangle = 'Равносторонний'
     elif eq_sides == 2:
         type_triangle = 'Равнобедренный'
-    elif eq_sides == 0 and max(sides) < sum(sides) - max(sides):
+    elif max(sides) < sum(sides) - max(sides):
         type_triangle = 'Обычный'
     else:
         type_triangle = 'Не треугольник'
