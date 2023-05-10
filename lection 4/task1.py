@@ -13,14 +13,14 @@ def which_triangle(a, b, c):
         if sides.count(x) > 1:
             eq_sides += 1
 
-    if eq_sides == 3:
+    if max(sides) >= sum(sides) - max(sides):
+        type_triangle = 'Не треугольник'
+    elif eq_sides == 3:
         type_triangle = 'Равносторонний'
     elif eq_sides == 2:
         type_triangle = 'Равнобедренный'
-    elif max(sides) < sum(sides) - max(sides):
-        type_triangle = 'Обычный'
     else:
-        type_triangle = 'Не треугольник'
+        type_triangle = 'Обычный'
 
     return type_triangle
 
