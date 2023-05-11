@@ -8,9 +8,7 @@
 
 def sum_digits(num):
     # Здесь нужно написать код
-    our_sum = 0
-    for x in str(num):
-        our_sum += int(x)
+    our_sum = sum((int(x) for x in str(num)))
     return our_sum
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
