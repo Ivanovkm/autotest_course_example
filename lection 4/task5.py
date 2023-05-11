@@ -15,6 +15,15 @@
 
 def josephus_task(num_people, kill_num):
     # Здесь нужно написать код
+    circle_of_death = [x for x in range(1, num_people + 1)]
+    death_pos = -1 + kill_num
+    while len(circle_of_death) > 1:
+        if death_pos < len(circle_of_death):
+            del circle_of_death[death_pos]
+            death_pos += kill_num - 1
+        else:
+            death_pos = death_pos - len(circle_of_death)
+    survivor = circle_of_death
     return survivor
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

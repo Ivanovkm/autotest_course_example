@@ -4,6 +4,10 @@
 
 def move_zeros(lst):
     # Здесь нужно написать код
+    zero_num = lst.count(0)
+    while 0 in lst:
+        lst.remove(0)
+    lst = lst + [0] * zero_num
     return lst
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
